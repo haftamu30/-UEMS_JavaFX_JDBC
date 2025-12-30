@@ -1,0 +1,201 @@
+/* AddEmployee Design CSS - High Contrast & Visibility */
+
+/* Color Variables */
+.root {
+    -fx-primary-gradient: linear-gradient(to right, #667eea, #764ba2);
+    -fx-secondary-gradient: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+
+    -fx-primary-color: #3498db;
+    -fx-success-color: #2ecc71;
+    -fx-warning-color: #f39c12;
+    -fx-danger-color: #e74c3c;
+    -fx-dark-color: #000000; /* Pure Black for text */
+    -fx-border-color: #888888; /* Darker gray for visibility */
+
+    -fx-font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+/* Main Container */
+.addemployee-container {
+    -fx-background-color: #f0f2f5;
+}
+
+/* Header Section */
+.header-section {
+    -fx-background-color: -fx-primary-gradient;
+    -fx-background-radius: 15;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 10, 0, 0, 3);
+    -fx-padding: 20;
+}
+
+.header-title {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+.header-subtitle {
+    -fx-text-fill: #eeeeee;
+    -fx-font-size: 14px;
+}
+
+/* --- INPUT FIELDS STYLING (VISIBILITY FIX) --- */
+
+/* Standard Text Fields and Text Areas */
+.text-field, .text-area {
+    -fx-background-color: white;
+    -fx-text-fill: black !important; /* Force Black Text */
+    -fx-prompt-text-fill: #666666;   /* Darker Gray for placeholder */
+    -fx-border-color: #888888;       /* Visible Border */
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-border-width: 1px;
+    -fx-font-size: 14px;
+    -fx-padding: 8 10;
+}
+
+.text-field:focused, .text-area:focused {
+    -fx-border-color: -fx-primary-color;
+    -fx-border-width: 2px;
+    -fx-background-color: #ffffff;
+    -fx-effect: dropshadow(gaussian, rgba(52,152,219,0.3), 5, 0, 0, 0);
+}
+
+/* Error Style for TextFields */
+.text-field.error {
+    -fx-border-color: -fx-danger-color;
+    -fx-border-width: 2px;
+}
+
+/* Combo Box (Dropdowns) */
+.combo-box {
+    -fx-background-color: white;
+    -fx-border-color: #888888;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-border-width: 1px;
+}
+
+.combo-box .list-cell {
+    -fx-text-fill: black !important; /* Black text in list */
+    -fx-background-color: white;
+}
+
+.combo-box .list-view {
+    -fx-background-color: white;
+    -fx-border-color: #888888;
+}
+
+.combo-box:focused {
+    -fx-border-color: -fx-primary-color;
+    -fx-border-width: 2px;
+}
+
+/* Date Picker */
+.date-picker {
+    -fx-background-color: white;
+    -fx-border-color: #888888;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+}
+
+.date-picker .text-field {
+    -fx-background-color: white;
+    -fx-text-fill: black !important;
+    -fx-border-color: transparent;
+}
+
+/* Labels */
+.form-label {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #000000; /* Black Labels */
+    -fx-padding: 5 0;
+}
+
+.required-label {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: -fx-danger-color;
+}
+
+/* Search Section */
+.search-section {
+    -fx-background-color: white;
+    -fx-background-radius: 15;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0, 0, 2);
+    -fx-padding: 20;
+    -fx-border-color: #dddddd;
+    -fx-border-width: 1px;
+}
+
+/* Main Form Container */
+.main-form {
+    -fx-background-color: white;
+    -fx-background-radius: 15;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0, 0, 2);
+    -fx-padding: 30;
+    -fx-border-color: #dddddd;
+    -fx-border-width: 1px;
+}
+
+.form-title {
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333333;
+    -fx-border-color: -fx-primary-color;
+    -fx-border-width: 0 0 3 0;
+    -fx-padding: 0 0 15 0;
+}
+
+/* Buttons */
+.action-button, .button {
+    -fx-background-radius: 5;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 3, 0, 0, 1);
+}
+
+.action-button:hover, .button:hover {
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 5, 0, 0, 2);
+    -fx-translate-y: -1px;
+}
+
+/* Specific Button Colors */
+.save-btn { -fx-background-color: #2ecc71; }
+.update-btn { -fx-background-color: #3498db; }
+.delete-btn { -fx-background-color: #e74c3c; }
+.clear-btn { -fx-background-color: #f39c12; }
+.print-btn { -fx-background-color: #9b59b6; }
+.upload-btn { -fx-background-color: #3498db; }
+
+/* Table View Visibility */
+.employee-table {
+    -fx-background-color: white;
+    -fx-border-color: #cccccc;
+}
+
+.employee-table .column-header {
+    -fx-background-color: #3498db;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+.employee-table .table-row-cell {
+    -fx-background-color: white;
+    -fx-text-fill: black;
+}
+
+.employee-table .table-row-cell:odd {
+    -fx-background-color: #f9f9f9;
+}
+
+.employee-table .table-row-cell:selected {
+    -fx-background-color: #bbdefb;
+    -fx-text-fill: black;
+}
+
+.employee-table .table-cell {
+    -fx-text-fill: black;
+}

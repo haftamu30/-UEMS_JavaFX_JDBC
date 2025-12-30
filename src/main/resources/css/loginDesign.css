@@ -1,0 +1,366 @@
+/* Login Design CSS - Modern Gradient Theme */
+
+/* Color Variables */
+.root {
+    -fx-primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -fx-secondary-gradient: linear-gradient(to right, #4a00e0, #8e2de2);
+    -fx-dark-overlay: rgba(0,0,0,0.2);
+    -fx-light-overlay: rgba(255,255,255,0.95);
+
+    -fx-primary-color: #3498db;
+    -fx-danger-color: #e74c3c;
+    -fx-dark-color: #2c3e50;
+    -fx-light-color: #7f8c8d;
+
+    -fx-font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+/* Main Container */
+.login-container {
+    -fx-background-color: -fx-primary-gradient;
+    -fx-effect: dropshadow(gaussian, rgba(102,126,234,0.4), 20, 0, 0, 10);
+}
+
+/* Left Panel */
+.left-panel {
+    -fx-background-color: -fx-dark-overlay;
+    -fx-background-radius: 20 0 0 20;
+}
+
+.left-panel .title {
+    -fx-text-fill: white;
+    -fx-font-family: 'Tahoma';
+    -fx-font-size: 48px;
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 5, 0, 0, 2);
+}
+
+.left-panel .subtitle {
+    -fx-text-fill: rgba(255,255,255,0.9);
+    -fx-font-family: 'Tahoma';
+    -fx-font-size: 14px;
+    -fx-font-weight: normal;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 3, 0, 0, 1);
+}
+
+/* Right Panel */
+.right-panel {
+    -fx-background-color: -fx-light-overlay;
+    -fx-background-radius: 0 0 0 20;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0, 0, 5);
+}
+
+/* Welcome Text */
+.welcome-title {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: -fx-dark-color;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.05), 2, 0, 0, 1);
+}
+
+.welcome-subtitle {
+    -fx-text-fill: -fx-light-color;
+    -fx-font-size: 14px;
+    -fx-padding: 5 0 20 0;
+}
+
+/* Form Fields Container */
+.field-container {
+    -fx-padding: 0 0 15 0;
+}
+
+.field-label {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: -fx-dark-color;
+    -fx-padding: 0 0 5 0;
+}
+
+/* Text Fields */
+.text-field, .password-field {
+    -fx-background-color: white;
+    -fx-border-color: -fx-primary-color;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+    -fx-padding: 0 15;
+    -fx-font-size: 14px;
+    -fx-text-fill: -fx-dark-color;
+    -fx-prompt-text-fill: #95a5a6;
+    -fx-effect: dropshadow(gaussian, rgba(52,152,219,0.1), 5, 0, 0, 2);
+    -fx-transition: all 0.3s ease;
+}
+
+.text-field:focused, .password-field:focused {
+    -fx-border-width: 2;
+    -fx-effect: dropshadow(gaussian, rgba(52,152,219,0.3), 10, 0, 0, 3);
+    -fx-background-color: #f8f9fa;
+}
+
+.text-field:hover, .password-field:hover {
+    -fx-effect: dropshadow(gaussian, rgba(52,152,219,0.2), 8, 0, 0, 2);
+}
+
+/* Field Icons */
+.field-icon {
+    -fx-fill: -fx-primary-color;
+    -fx-effect: dropshadow(gaussian, rgba(52,152,219,0.2), 3, 0, 0, 1);
+}
+
+/* Login Button */
+.login-button {
+    -fx-background-color: linear-gradient(to right, #3498db, #2980b9);
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 16px;
+    -fx-padding: 12 20;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(52,152,219,0.3), 10, 0, 0, 3);
+    -fx-transition: all 0.3s ease;
+}
+
+.login-button:hover {
+    -fx-background-color: linear-gradient(to right, #2980b9, #2573a7);
+    -fx-translate-y: -2px;
+    -fx-effect: dropshadow(gaussian, rgba(52,152,219,0.4), 15, 0, 0, 5);
+}
+
+.login-button:pressed {
+    -fx-background-color: linear-gradient(to right, #2573a7, #21618c);
+    -fx-translate-y: 0;
+    -fx-effect: dropshadow(gaussian, rgba(52,152,219,0.2), 5, 0, 0, 2);
+}
+
+.login-button:disabled {
+    -fx-background-color: #bdc3c7;
+    -fx-text-fill: #7f8c8d;
+    -fx-effect: none;
+}
+
+.login-button .icon {
+    -fx-fill: white;
+}
+
+/* Close Button */
+.close-button {
+    -fx-background-color: -fx-danger-color;
+    -fx-background-radius: 15;
+    -fx-border-radius: 15;
+    -fx-text-fill: white;
+    -fx-cursor: hand;
+    -fx-padding: 5;
+    -fx-effect: dropshadow(gaussian, rgba(231,76,60,0.3), 5, 0, 0, 2);
+    -fx-transition: all 0.3s ease;
+}
+
+.close-button:hover {
+    -fx-background-color: #c0392b;
+    -fx-scale-x: 1.1;
+    -fx-scale-y: 1.1;
+    -fx-effect: dropshadow(gaussian, rgba(231,76,60,0.4), 8, 0, 0, 3);
+}
+
+.close-button:pressed {
+    -fx-scale-x: 1;
+    -fx-scale-y: 1;
+    -fx-effect: dropshadow(gaussian, rgba(231,76,60,0.2), 3, 0, 0, 1);
+}
+
+.close-button .icon {
+    -fx-fill: white;
+}
+
+/* Form Validation */
+.validation-error {
+    -fx-border-color: #e74c3c !important;
+    -fx-border-width: 2 !important;
+    -fx-effect: dropshadow(gaussian, rgba(231,76,60,0.3), 10, 0, 0, 3) !important;
+}
+
+.error-message {
+    -fx-text-fill: #e74c3c;
+    -fx-font-size: 12px;
+    -fx-padding: 5 0 0 0;
+    -fx-font-weight: bold;
+}
+
+/* Loading State */
+.loading .login-button {
+    -fx-background-color: #95a5a6;
+    -fx-cursor: wait;
+}
+
+/* Success State */
+.success-message {
+    -fx-text-fill: #27ae60;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-padding: 10;
+    -fx-background-color: rgba(39,174,96,0.1);
+    -fx-background-radius: 5;
+    -fx-border-color: #27ae60;
+    -fx-border-radius: 5;
+    -fx-border-width: 1;
+}
+
+/* Remember Me Checkbox */
+.check-box {
+    -fx-text-fill: -fx-dark-color;
+    -fx-font-size: 13px;
+}
+
+.check-box .box {
+    -fx-background-color: white;
+    -fx-border-color: #3498db;
+    -fx-border-radius: 3;
+    -fx-border-width: 2;
+}
+
+.check-box:selected .box {
+    -fx-background-color: #3498db;
+}
+
+.check-box:selected .mark {
+    -fx-background-color: white;
+}
+
+.check-box:hover .box {
+    -fx-effect: dropshadow(gaussian, rgba(52,152,219,0.2), 5, 0, 0, 2);
+}
+
+/* Forgot Password Link */
+.forgot-link {
+    -fx-text-fill: #3498db;
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+    -fx-underline: false;
+    -fx-padding: 5 0;
+    -fx-transition: all 0.3s ease;
+}
+
+.forgot-link:hover {
+    -fx-text-fill: #2980b9;
+    -fx-underline: true;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        -fx-opacity: 0;
+        -fx-translate-y: 20;
+    }
+    to {
+        -fx-opacity: 1;
+        -fx-translate-y: 0;
+    }
+}
+
+.login-form {
+    -fx-animation: fadeIn 0.6s ease-out;
+}
+
+@keyframes pulse {
+    0% {
+        -fx-effect: dropshadow(gaussian, rgba(52,152,219,0.3), 10, 0, 0, 3);
+    }
+    50% {
+        -fx-effect: dropshadow(gaussian, rgba(52,152,219,0.6), 15, 0, 0, 5);
+    }
+    100% {
+        -fx-effect: dropshadow(gaussian, rgba(52,152,219,0.3), 10, 0, 0, 3);
+    }
+}
+
+.pulse-effect {
+    -fx-animation: pulse 2s infinite;
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 600px) {
+    .left-panel {
+        -fx-background-radius: 20 20 0 0;
+    }
+
+    .right-panel {
+        -fx-background-radius: 0 0 20 20;
+    }
+
+    .welcome-title {
+        -fx-font-size: 20px;
+    }
+
+    .text-field, .password-field {
+        -fx-font-size: 13px;
+    }
+}
+
+/* Glass Effect */
+.glass-effect {
+    -fx-background-color: rgba(255,255,255,0.1);
+    -fx-backdrop-filter: blur(10px);
+    -fx-border-color: rgba(255,255,255,0.2);
+    -fx-border-width: 1;
+    -fx-border-radius: 15;
+    -fx-background-radius: 15;
+}
+
+/* Gradient Border Effect */
+.gradient-border {
+    -fx-border-width: 3;
+    -fx-border-radius: 12;
+    -fx-background-radius: 10;
+    -fx-border-image-source: linear-gradient(to right, #667eea, #764ba2);
+    -fx-border-image-slice: 1;
+}
+
+/* Custom Cursors */
+.cursor-hand {
+    -fx-cursor: hand;
+}
+
+.cursor-wait {
+    -fx-cursor: wait;
+}
+
+.cursor-default {
+    -fx-cursor: default;
+}
+
+/* Accessibility */
+.high-contrast .text-field,
+.high-contrast .password-field {
+    -fx-border-width: 2;
+    -fx-border-color: black;
+}
+
+.high-contrast .login-button {
+    -fx-background-color: #000000;
+    -fx-text-fill: white;
+}
+
+/* Dark Mode Support */
+.dark-mode .right-panel {
+    -fx-background-color: #2c3e50;
+}
+
+.dark-mode .welcome-title {
+    -fx-text-fill: white;
+}
+
+.dark-mode .welcome-subtitle {
+    -fx-text-fill: #bdc3c7;
+}
+
+.dark-mode .field-label {
+    -fx-text-fill: white;
+}
+
+.dark-mode .text-field,
+.dark-mode .password-field {
+    -fx-background-color: #34495e;
+    -fx-text-fill: white;
+    -fx-prompt-text-fill: #7f8c8d;
+    -fx-border-color: #3498db;
+}
