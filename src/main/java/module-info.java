@@ -8,11 +8,10 @@ module UEMS {
     requires org.kordamp.ikonli.javafx;
     requires org.kordamp.ikonli.fontawesome5;
 
-    // Use the correct package name based on your project's directory structure
+    opens employeemanagementsystem;
     opens employeemanagementsystem.controller to javafx.fxml;
     opens employeemanagementsystem.model to javafx.base;
 
-    exports employeemanagementsystem;
     exports employeemanagementsystem.controller;
     exports employeemanagementsystem.model;
     exports employeemanagementsystem.service;

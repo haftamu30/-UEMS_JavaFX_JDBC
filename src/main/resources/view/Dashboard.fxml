@@ -216,13 +216,13 @@
                                                         <TextField fx:id="addEmployee_fullName" style="-fx-background-radius: 5; -fx-border-radius: 5;" GridPane.columnIndex="1" GridPane.rowIndex="2" />
 
                                                         <Label text="Gender:*" GridPane.columnIndex="0" GridPane.rowIndex="3" />
-                                                        <ComboBox fx:id="addEmployee_gender" prefWidth="300" style="-fx-background-radius: 5;" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                                        <ComboBox fx:id="addEmployee_gender" prefWidth="300" visibleRowCount="5" style="-fx-background-radius: 5; -fx-max-height: 30;" GridPane.columnIndex="1" GridPane.rowIndex="3" />
 
                                                         <Label text="Date of Birth:" GridPane.columnIndex="0" GridPane.rowIndex="4" />
                                                         <HBox spacing="5" GridPane.columnIndex="1" GridPane.rowIndex="4">
-                                                            <ComboBox fx:id="addEmployee_dob_day" prefWidth="80" promptText="Day" />
-                                                            <ComboBox fx:id="addEmployee_dob_month" prefWidth="120" promptText="Month" />
-                                                            <ComboBox fx:id="addEmployee_dob_year" prefWidth="100" promptText="Year" />
+                                                            <ComboBox fx:id="addEmployee_dob_day" prefWidth="80" visibleRowCount="5" promptText="Day" style="-fx-max-height: 30;" />
+                                                            <ComboBox fx:id="addEmployee_dob_month" prefWidth="120" visibleRowCount="5" promptText="Month" style="-fx-max-height: 30;" />
+                                                            <ComboBox fx:id="addEmployee_dob_year" prefWidth="100" visibleRowCount="5" promptText="Year" style="-fx-max-height: 30;" />
                                                         </HBox>
                                                         <rowConstraints>
                                                             <RowConstraints />
@@ -254,7 +254,7 @@
                                                         <TextField fx:id="addEmployee_emergencyContact" style="-fx-background-radius: 5; -fx-border-radius: 5;" GridPane.columnIndex="1" GridPane.rowIndex="2" />
 
                                                         <Label text="Address:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
-                                                        <ComboBox fx:id="addEmployee_address" prefWidth="300" promptText="Select City" style="-fx-background-radius: 5;" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                                        <ComboBox fx:id="addEmployee_address" prefWidth="300" visibleRowCount="5" promptText="Select City" style="-fx-background-radius: 5; -fx-max-height: 30;" GridPane.columnIndex="1" GridPane.rowIndex="3" />
                                                         <rowConstraints>
                                                             <RowConstraints />
                                                             <RowConstraints />
@@ -275,13 +275,13 @@
                                                         </columnConstraints>
 
                                                         <Label text="Employee Type:*" GridPane.columnIndex="0" GridPane.rowIndex="0" />
-                                                        <ComboBox fx:id="addEmployee_type" prefWidth="300" style="-fx-background-radius: 5;" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                                                        <ComboBox fx:id="addEmployee_type" prefWidth="300" visibleRowCount="5" style="-fx-background-radius: 5; -fx-max-height: 30;" GridPane.columnIndex="1" GridPane.rowIndex="0" />
 
                                                         <Label text="Position:*" GridPane.columnIndex="0" GridPane.rowIndex="1" />
-                                                        <ComboBox fx:id="addEmployee_position" prefWidth="300" style="-fx-background-radius: 5;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                        <ComboBox fx:id="addEmployee_position" prefWidth="300" visibleRowCount="5" style="-fx-background-radius: 5; -fx-max-height: 30;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
 
                                                         <Label text="Department:*" GridPane.columnIndex="0" GridPane.rowIndex="2" />
-                                                        <ComboBox fx:id="addEmployee_department" prefWidth="300" style="-fx-background-radius: 5;" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                        <ComboBox fx:id="addEmployee_department" prefWidth="300" visibleRowCount="5" style="-fx-background-radius: 5; -fx-max-height: 30;" GridPane.columnIndex="1" GridPane.rowIndex="2" />
 
                                                         <Label text="Hire Date:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
                                                         <DatePicker fx:id="addEmployee_hireDate" prefWidth="300" style="-fx-background-radius: 5;" GridPane.columnIndex="1" GridPane.rowIndex="3" />
@@ -305,13 +305,13 @@
                                                         </columnConstraints>
 
                                                         <Label text="Qualification:*" GridPane.columnIndex="0" GridPane.rowIndex="0" />
-                                                        <ComboBox fx:id="addEmployee_qualification" prefWidth="300" style="-fx-background-radius: 5;" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                                                        <ComboBox fx:id="addEmployee_qualification" prefWidth="300" visibleRowCount="5" style="-fx-background-radius: 5; -fx-max-height: 30;" GridPane.columnIndex="1" GridPane.rowIndex="0" />
 
                                                         <Label text="Specialization:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
-                                                        <ComboBox fx:id="addEmployee_specialization" prefWidth="300" style="-fx-background-radius: 5;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                        <ComboBox fx:id="addEmployee_specialization" prefWidth="300" visibleRowCount="5" style="-fx-background-radius: 5; -fx-max-height: 30;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
 
                                                         <Label text="Status:*" GridPane.columnIndex="0" GridPane.rowIndex="2" />
-                                                        <ComboBox fx:id="addEmployee_status" prefWidth="300" style="-fx-background-radius: 5;" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                        <ComboBox fx:id="addEmployee_status" prefWidth="300" visibleRowCount="5" style="-fx-background-radius: 5; -fx-max-height: 30;" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                                                         <rowConstraints>
                                                             <RowConstraints />
                                                             <RowConstraints />

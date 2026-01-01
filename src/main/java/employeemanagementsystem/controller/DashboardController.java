@@ -702,6 +702,11 @@ public class DashboardController implements Initializable {
         addEmployee_dob_day.getSelectionModel().clearSelection();
         addEmployee_dob_month.getSelectionModel().clearSelection();
         addEmployee_dob_year.getSelectionModel().clearSelection();
+        addEmployee_hireDate.setValue(null);
+        addEmployee_type.getSelectionModel().clearSelection();
+        addEmployee_dob_day.getSelectionModel().clearSelection();
+        addEmployee_dob_month.getSelectionModel().clearSelection();
+        addEmployee_dob_year.getSelectionModel().clearSelection();
         addEmployee_hireDate.setValue(LocalDate.now());
         addEmployee_image.setImage(null);
         GetData.path = "";
