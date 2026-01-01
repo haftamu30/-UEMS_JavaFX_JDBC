@@ -217,53 +217,90 @@ public class AddEmployeeController {
             ));
         }
 
-        // Update specializations based on position
+        // Update specializations based on position and department
         positionComboBox.valueProperty().addListener((obs, oldVal, newVal) -> {
-            updateSpecializations(newVal);
+            updateSpecializations(newVal, departmentComboBox.getValue());
+        });
+        departmentComboBox.valueProperty().addListener((obs, oldVal, newVal) -> {
+            updateSpecializations(positionComboBox.getValue(), newVal);
         });
     }
 
-    private void updateSpecializations(String position) {
+    private void updateSpecializations(String position, String department) {
         specializationComboBox.getItems().clear();
 
-        if (position != null) {
-            switch (position) {
-                case "Lecturer":
-                case "Professor":
-                    specializationComboBox.setItems(FXCollections.observableArrayList(
-                            "Artificial Intelligence", "Data Science", "Software Engineering",
-                            "Networks & Security", "Database Systems", "Computer Architecture"
-                    ));
+        if (position != null && department != null) {
+            switch (department) {
+                case "Computer Science":
+                    switch (position) {
+                        case "Lecturer":
+                        case "Professor":
+                            specializationComboBox.setItems(FXCollections.observableArrayList(
+                                    "Artificial Intelligence", "Data Science", "Software Engineering",
+                                    "Networks & Security", "Database Systems", "Computer Architecture"
+                            ));
+                            break;
+                        case "Researcher":
+                            specializationComboBox.setItems(FXCollections.observableArrayList(
+                                    "Machine Learning", "Computer Vision", "Natural Language Processing",
+                                    "Robotics", "Big Data Analytics", "Computer Networks"
+                            ));
+                            break;
+                        case "Teaching Assistant":
+                            specializationComboBox.setItems(FXCollections.observableArrayList(
+                                    "Programming", "Algorithms", "Data Structures",
+                                    "Web Development", "Mobile Development", "Database Systems"
+                            ));
+                            break;
+                    }
                     break;
-                case "Researcher":
-                    specializationComboBox.setItems(FXCollections.observableArrayList(
-                            "Machine Learning", "Computer Vision", "Natural Language Processing",
-                            "Robotics", "Big Data Analytics", "Computer Networks"
-                    ));
+                case "Electrical Engineering":
+                     switch (position) {
+                        case "Lecturer":
+                        case "Professor":
+                            specializationComboBox.setItems(FXCollections.observableArrayList(
+                                    "Power Systems", "Control Systems", "Electronics",
+                                    "Telecommunications", "Embedded Systems"
+                            ));
+                            break;
+                        case "Researcher":
+                            specializationComboBox.setItems(FXCollections.observableArrayList(
+                                    "Renewable Energy", "Smart Grids", "Wireless Communications",
+                                    "VLSI Design", "Signal Processing"
+                            ));
+                            break;
+                    }
                     break;
-                case "Teaching Assistant":
-                    specializationComboBox.setItems(FXCollections.observableArrayList(
-                            "Programming", "Algorithms", "Data Structures",
-                            "Web Development", "Mobile Development", "Database Systems"
-                    ));
+                case "Human Resources":
+                     switch (position) {
+                        case "HR Officer":
+                            specializationComboBox.setItems(FXCollections.observableArrayList(
+                                    "Recruitment", "Employee Relations", "Training & Development",
+                                    "Compensation & Benefits", "HR Analytics"
+                            ));
+                            break;
+                    }
                     break;
-                case "Technical Assistant":
-                    specializationComboBox.setItems(FXCollections.observableArrayList(
-                            "Networking", "Hardware", "System Administration",
-                            "Database Administration", "Technical Support"
-                    ));
+                case "Finance":
+                    switch (position) {
+                        case "Finance Officer":
+                            specializationComboBox.setItems(FXCollections.observableArrayList(
+                                    "Accounting", "Financial Management", "Payroll Management",
+                                    "Budgeting & Forecasting", "Auditing"
+                            ));
+                            break;
+                    }
                     break;
-                case "HR Officer":
-                    specializationComboBox.setItems(FXCollections.observableArrayList(
-                            "Recruitment", "Employee Relations", "Training & Development",
-                            "Compensation & Benefits", "HR Analytics"
-                    ));
-                    break;
-                case "Finance Officer":
-                    specializationComboBox.setItems(FXCollections.observableArrayList(
-                            "Accounting", "Financial Management", "Payroll Management",
-                            "Budgeting & Forecasting", "Auditing"
-                    ));
+                case "ICT Services":
+                    switch (position) {
+                        case "ICT Officer":
+                        case "Network Engineer":
+                            specializationComboBox.setItems(FXCollections.observableArrayList(
+                                    "Networking", "System Administration", "Cybersecurity",
+                                    "Cloud Computing", "IT Support"
+                            ));
+                            break;
+                    }
                     break;
                 default:
                     specializationComboBox.setItems(FXCollections.observableArrayList("General"));
@@ -717,6 +754,8 @@ public class AddEmployeeController {
         completionPercentageLabel.setText("0% Complete");
         validationMessageLabel.setText("");
     }
+
+
 
     private void resetFieldStyles() {
         usernameField.setStyle("");
